@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyu160802.dao.DeptDao">
+
+    <sql id="dept_sql">
+        id,name,remark
+    </sql>
+    <select id="queryDept" resultType="com.wyu160802.entity.Dept">
+       SELECT
+        <include refid="dept_sql"/>
+       FROM dept;
+    </select>
+
+    <update id="updateDept" parameterType="com.wyu160802.entity.Dept">
+        UPDATE dept
+        <set>
+            name=#{name}
+            <if test="remark!=null and remark!=''">
+                ,remark=#{remark}
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <insert id="addDept" parameterType="com.wyu160802.entity.Dept">
+        INSERT INTO
+        dept(name,remark)
+        VALUES(#{name},#{remark})
+    </insert>
+
+    <delete id="delDept" parameterType="Integer">
+        DELETE
+        FROM dept
+        WHERE id=#{id}
+    </delete>
+
+</mapper>

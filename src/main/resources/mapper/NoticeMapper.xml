@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyu160802.dao.NoticeDao">
+    <sql id="notice_sql">
+        id,name,title,content,remark
+    </sql>
+
+    <insert id="addNotice">
+        INSERT
+        INTO notice(name,title,content)
+        VALUES(#{name},#{title},#{content})
+    </insert>
+
+    <select id="queryNotice" resultType="com.wyu160802.entity.Notice">
+        SELECT
+        <include refid="notice_sql"/>
+        FROM notice
+    </select>
+
+    <select id="showNotice" parameterType="Integer" resultType="com.wyu160802.entity.Notice">
+        SELECT
+        <include refid="notice_sql"/>
+        FROM notice
+        WHERE id=#{id}
+    </select>
+
+</mapper>

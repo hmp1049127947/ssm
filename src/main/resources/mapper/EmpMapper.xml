@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyu160802.dao.EmployeeDao">
+
+    <sql id="emp_sql">
+          a.id,
+          a.dept_id,
+          a.job_id,
+          a.name,
+          a.card_id,
+          a.address,
+          a.post_code,
+          a.phone,
+          a.qq_num,
+          a.email,
+          a.sex,
+          a.party,
+          a.birthday,
+          a.race,
+          a.education,
+          a.speciality,
+          a.hobby,
+          a.remark,
+          a.create_date
+    </sql>
+
+    <update id="updateEmp" parameterType="com.wyu160802.entity.Employee">
+        UPDATE employee
+        <set>
+            <if test="deptId!=null and deptId!=''">
+                dept_id=#{deptId}
+            </if>
+            <if test="jobId!=null and jobId!=''">
+                ,job_id=#{jobId}
+            </if>
+            <if test="sex!=null and sex!=''">
+                ,sex=#{sex}
+            </if>
+            <if test="name!=null and name!=''">
+               , name=#{name}
+            </if>
+            <if test="cardId!=null and cardId!=''">
+                ,card_id=#{cardId}
+            </if>
+            <if test="address!=null and address!=''">
+                ,address=#{address}
+            </if>
+            <if test="postCode!=null and postCode!=''">
+                ,post_code=#{postCode}
+            </if>
+            <if test="phone!=null and phone!=''">
+                ,phone=#{phone}
+            </if>
+            <if test="qqNum!=null and qqNum!=''">
+                ,qq_num=#{qqNum}
+            </if>
+            <if test="email!=null and email!=''">
+                ,email=#{email}
+            </if>
+            <if test="party!=null and party!=''">
+                ,party=#{party}
+            </if>
+            <if test="race!=null and race!=''">
+                ,race=#{race}
+            </if>
+            <if test="education!=null and education!=''">
+                ,education=#{education}
+            </if>
+            <if test="speciality!=null and speciality!=''">
+                ,speciality=#{speciality}
+            </if>
+            <if test="hobby!=null and hobby!=''">
+                ,hobby=#{hobby}
+            </if>
+            <if test="remark!=null and remark!=''">
+                ,remark=#{remark}
+            </if>
+            <if test="birthday!=null and birthday!=''">
+                ,birthday=#{birthday}
+            </if>
+            <if test="createDate!=null and createDate!=''">
+                ,createDate=#{createDate}
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <select id="queryEmpDto" resultType="com.wyu160802.entity.EmployeeDto">
+        SELECT
+          a.id,a.dept_id,a.job_id,a.name,a.card_id,a.address,a.post_code,
+          a.phone,a.qq_num,a.email,a.sex,a.party,a.birthday,a.race,a.education,
+          a.speciality,a.hobby,a.remark,a.create_date,
+          b.name AS deptName,
+          c.name AS jobName,
+		  (
+            CASE a.sex
+            WHEN 1 THEN
+                '男'
+            WHEN 2 THEN
+                '女'
+            END
+          ) gender
+        FROM
+	        employee a
+            LEFT JOIN dept b ON a.dept_id = b.id
+            LEFT JOIN job c ON a.job_id = c.id
+    </select>
+
+    <select id="queryEmpDtoById" parameterType="Integer" resultType="com.wyu160802.entity.EmployeeDto">
+        SELECT
+          a.id,a.dept_id,a.job_id,a.name,a.card_id,a.address,a.post_code,
+          a.phone,a.qq_num,a.email,a.sex,a.party,a.birthday,a.race,a.education,
+          a.speciality,a.hobby,a.remark,a.create_date,
+          b.name AS deptName,
+          c.name AS jobName,
+		  (
+            CASE a.sex
+            WHEN 1 THEN
+                '男'
+            WHEN 2 THEN
+                '女'
+            END
+          ) gender
+        FROM
+	        employee a
+            LEFT JOIN dept b ON a.dept_id = b.id
+            LEFT JOIN job c ON a.job_id = c.id
+        WHERE a.id=#{id}
+    </select>
+
+    <insert id="insertEmp" parameterType="com.wyu160802.entity.Employee">
+       INSERT INTO employee
+            VALUES
+                (#{id},#{deptId},#{jobId},#{name},#{cardId},#{address},
+                #{postCode},#{phone},#{qqNum},#{email},#{sex},
+                #{party},#{birthday},#{race},#{education},
+                #{speciality},#{hobby},#{remark},#{createDate})
+    </insert>
+
+    <delete id="delEmpById" parameterType="Integer">
+        DELETE
+        FROM employee
+        WHERE id=#{id}
+    </delete>
+
+</mapper>

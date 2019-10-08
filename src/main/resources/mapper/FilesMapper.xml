@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyu160802.dao.FilesDao">
+
+    <insert id="uploadFile" parameterType="String">
+        INSERT  INTO files(fileTitle,fileName)
+        VALUES (#{fileTitle},#{fileName});
+    </insert>
+    <select id="filesPage" parameterType="Integer" resultType="com.wyu160802.entity.Files">
+        SELECT * FROM files
+        limit #{page},#{rows}
+    </select>
+    <select id="filesNum" resultType="Integer">
+        SELECT COUNT(*) FROM files
+    </select>
+</mapper>

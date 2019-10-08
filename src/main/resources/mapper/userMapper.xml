@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyu160802.dao.UserDao">
+
+    <sql id="user_sql">
+        id,number,password,phone,createdate,username,remark
+    </sql>
+    <select id="queryUser" resultType="com.wyu160802.entity.User" parameterType="String">
+        SELECT
+         <include refid="user_sql"/>
+         FROM user
+        WHERE username=#{username};
+    </select>
+
+    <select id="queryAllUsers" parameterType="Integer" resultType="com.wyu160802.entity.User">
+        SELECT
+        <include refid="user_sql"/>
+        FROM user
+        ORDER BY createdate DESC
+        limit #{leftArg},#{rightArg}
+    </select>
+
+    <select id="queryUserTotal" resultType="Integer">
+        SELECT COUNT(*) FROM user
+    </select>
+
+    <delete id="deleteMulti">
+        DELETE FROM user
+        WHERE id IN
+        <foreach collection="array" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="queryUserById" resultType="com.wyu160802.entity.User">
+        SELECT
+        <include refid="user_sql"/>
+        FROM user
+        WHERE id=#{id};
+    </select>
+
+    <update id="updateUser">
+        UPDATE user
+        SET
+          number=#{number},
+          username=#{username},
+          password=#{password},
+          phone=#{phone},
+          remark=#{remark}
+        WHERE
+          id=#{id}
+    </update>
+    
+    <select id="queryByNumber" resultType="com.wyu160802.entity.User">
+        SELECT
+        <include refid="user_sql"/>
+        FROM user
+        WHERE number=#{number}
+    </select>
+
+    <select id="queryByPhone" resultType="com.wyu160802.entity.User">
+        SELECT
+        <include refid="user_sql"/>
+        FROM user
+        WHERE phone=#{phone}
+    </select>
+
+    <select id="searchUser" parameterType="com.wyu160802.entity.UserPageDto" resultType="com.wyu160802.entity.User">
+        SELECT
+        <include refid="user_sql"/>
+        FROM user
+        <where>
+            <if test="number!=null and number!='' ">
+               OR number LIKE concat('%',#{number},'%')
+            </if>
+            <if test="phone!=null and phone!='' ">
+                OR phone LIKE concat('%',#{phone},'%')
+            </if>
+            <if test="username!=null and username!='' ">
+                OR username LIKE concat('%',#{username},'%')
+            </if>
+        </where>
+        limit #{pageNumber},#{rows}
+    </select>
+
+    <select id="flitTotal" parameterType="com.wyu160802.entity.UserPageDto" resultType="Integer">
+        SELECT
+            COUNT(*)
+        FROM user
+        <where>
+            <if test="number!=null and number!='' ">
+                OR number LIKE concat('%',#{number},'%')
+            </if>
+            <if test="phone!=null and phone!='' ">
+                OR phone LIKE concat('%',#{phone},'%')
+            </if>
+            <if test="username!=null and username!='' ">
+                OR username LIKE concat('%',#{username},'%')
+            </if>
+        </where>
+    </select>
+
+    <insert id="insertPerson">
+        INSERT INTO
+        user(number,password,phone,username,remark)
+        VALUES(#{number},#{password},#{phone},#{username},#{remark})
+    </insert>
+
+
+
+</mapper>

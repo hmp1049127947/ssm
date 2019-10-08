@@ -1,5 +1,9 @@
 package com.wyu160802.entity;
 
+
+
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -9,13 +13,23 @@ import java.util.Date;
  */
 public class User implements Serializable {
 
+    private Integer id;
     private String number;
     private String password;
     private Integer status;
     private String phone;
+    @JSONField(format = "yyyy-MM/dd HH:mm:ss")
     private Date createdate;
     private String username;
     private String remark;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNumber() {
         return number;
@@ -76,7 +90,8 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "number='" + number + '\'' +
+                "id=" + id +
+                ", number='" + number + '\'' +
                 ", password='" + password + '\'' +
                 ", status=" + status +
                 ", phone='" + phone + '\'' +

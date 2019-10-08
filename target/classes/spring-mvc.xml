@@ -18,6 +18,42 @@
 
     <!-- 默认的注解映射的支持 -->
     <mvc:annotation-driven/>
+    <!-- 支持返回json（避免IE在ajax请求时，返回json出现下载），@responseBody-（数据绑定）-messageConverters -->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="mappingJacksonHttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 前端Json转换器 -->
+    <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="text"/>
+                    <constructor-arg index="1" value="plain"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="*"/>
+                    <constructor-arg index="1" value="*"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="text"/>
+                    <constructor-arg index="1" value="*"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+                <bean class="org.springframework.http.MediaType">
+                    <constructor-arg index="0" value="application"/>
+                    <constructor-arg index="1" value="json"/>
+                    <constructor-arg index="2" value="UTF-8"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
 
     <!-- 定义视图文件解析 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -27,6 +63,14 @@
 
     <!-- 静态资源映射 -->
     <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
+
+    <!-- 上传文件 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+        <!-- 以字节为单位的最大上传文件的大小 -->
+        <property name="maxUploadSize" value="1000000000" />
+    </bean>
 
     <!--<mvc:interceptors>-->
         <!--&lt;!&ndash;放行了login，故postInterceptor方法中的modelAndView没有login的view&ndash;&gt;-->

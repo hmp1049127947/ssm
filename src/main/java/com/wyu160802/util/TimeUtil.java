@@ -172,8 +172,11 @@ public class TimeUtil {
         return date;
     }
 
-    /*
+    /**
      * 将时间转换为时间戳
+     * @param s
+     * @return
+     * @throws ParseException
      */
     public static String dateToStamp(String s) throws ParseException {
         String res;
@@ -183,8 +186,11 @@ public class TimeUtil {
         res = String.valueOf(ts);
         return res;
     }
-    /*
+
+    /**
      * 将时间戳转换为时间
+     * @param s
+     * @return
      */
     public static String stampToDate(String s){
         String res;

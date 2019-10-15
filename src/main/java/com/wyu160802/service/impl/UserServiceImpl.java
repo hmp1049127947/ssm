@@ -103,7 +103,7 @@ public class UserServiceImpl implements UserService {
                 //判断是新增还是修改账号
                 if (user.getId() != null) {
                     //判断存在的账号是否为自己的账号，如果不是则该账号已被注册
-                    if (user.getId() != user1.getId()) {
+                    if (!user.getId().equals(user1.getId())) {
                         baseResult = BaseResult.fail("该账号已被注册");
                         return baseResult;
                     }
@@ -121,7 +121,7 @@ public class UserServiceImpl implements UserService {
             User user1 = userDao.queryByPhone(user.getPhone());
             if (user1 != null) {
                 if (user.getId() != null) {
-                    if (user.getId() != user1.getId()) {
+                    if (!user.getId().equals(user1.getId())) {
                         baseResult = BaseResult.fail("该手机号已被注册");
                         return baseResult;
                     }

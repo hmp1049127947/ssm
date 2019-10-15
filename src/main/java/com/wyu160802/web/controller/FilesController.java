@@ -64,7 +64,8 @@ public class FilesController {
      */
     @RequestMapping("/download")
     public String download(String fileName, HttpServletRequest request, HttpServletResponse response){
-        String filePath = "static/upload/";         //文件在项目的相对位置
+        //文件在项目的相对位置
+        String filePath = "static/upload/";
         String s = FileDownloadUtil.downloadFile(fileName, filePath, request, response);
         return s;
     }

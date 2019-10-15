@@ -27,16 +27,19 @@ public class FileUploadUtil {
                 String picture = file.getOriginalFilename();
                 filePath = request.getSession().getServletContext().getRealPath("/WEB-INF/upload/");
                 fileName = UUID.randomUUID() + picture.substring(picture.lastIndexOf("."));
-                File targetFile = new File(filePath, fileName); // 新建文件
-                if (!targetFile.exists()) { // 判断文件的路径是否存在
-                    targetFile.mkdirs(); // 如果文件不存在 在目录中创建文件夹 这里要注意mkdir()和mkdirs()的区别
+                // 新建文件
+                File targetFile = new File(filePath, fileName);
+                // 判断文件的路径是否存在
+                if (!targetFile.exists()) {
+                    // 如果文件不存在 在目录中创建文件夹 这里要注意mkdir()和mkdirs()的区别
+                    targetFile.mkdirs();
                 }
-                // 保存
-                file.transferTo(targetFile); // 传送 失败就抛异常
+                // 保存 失败就抛异常
+                file.transferTo(targetFile);
 
                 // 执行更新图片在服务器的地址
             }
-        } catch (Exception e) {//进行错误处理
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -50,7 +53,7 @@ public class FileUploadUtil {
      * @param request
      * @return
      */
-    public static List<String> uploadFileList(MultipartFile file[],HttpServletRequest request){
+    public static List<String> uploadFileList(MultipartFile[] file, HttpServletRequest request){
         List<String> stringList = new ArrayList<>();
         try {
             if (file != null) {
@@ -58,16 +61,20 @@ public class FileUploadUtil {
                     String picture = file[i].getOriginalFilename();
                     String filePath = request.getSession().getServletContext().getRealPath("/static/upload/");
                     String fileName = UUID.randomUUID()+"-wyu-"+picture;
-                    File targetFile = new File(filePath, fileName); // 新建文件
-                    if (!targetFile.exists()) { // 判断文件的路径是否存在
-                        targetFile.mkdirs(); // 如果文件不存在 在目录中创建文件夹 这里要注意mkdir()和mkdirs()的区别
+                    // 新建文件
+                    File targetFile = new File(filePath, fileName);
+                    // 判断文件的路径是否存在
+                    if (!targetFile.exists()) {
+                        // 如果文件不存在 在目录中创建文件夹 这里要注意mkdir()和mkdirs()的区别
+                        targetFile.mkdirs();
                     }
-                    file[i].transferTo(targetFile); // 传送 失败就抛异常
+                    // 传送 失败就抛异常
+                    file[i].transferTo(targetFile);
                     // 执行更新图片在服务器的地址
                     stringList.add(fileName);
                 }
             }
-        }catch (Exception e) {//进行错误处理
+        }catch (Exception e) {
             e.printStackTrace();
             return null;
         }

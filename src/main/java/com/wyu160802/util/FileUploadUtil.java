@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+@SuppressWarnings({"ALL", "AlibabaClassMustHaveAuthor"})
 public class FileUploadUtil {
 
     /**

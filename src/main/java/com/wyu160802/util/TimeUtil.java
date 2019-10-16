@@ -9,6 +9,7 @@ import java.util.Date;
 /**
  * Created by wnf on 2018-7-28.
  */
+@SuppressWarnings({"ALL", "AlibabaClassMustHaveAuthor"})
 public class TimeUtil {
 
     public static String dateToString(Date date){

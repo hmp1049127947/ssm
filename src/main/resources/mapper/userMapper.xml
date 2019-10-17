@@ -108,6 +108,12 @@
         VALUES(#{number},#{password},#{phone},#{username},#{remark})
     </insert>
 
+    <select id="findByNumber" resultType="com.wyu160802.entity.User">
+        SELECT
+        <include refid="user_sql"/>
+        FROM user
+        WHERE number=#{number,jdbcType=VARCHAR}
+    </select>
 
 
 </mapper>

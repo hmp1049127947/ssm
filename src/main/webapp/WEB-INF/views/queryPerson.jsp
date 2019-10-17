@@ -50,7 +50,6 @@
 			url:'/queryPerson' ,
 			data:{'keyword':value},
 			success:function () {
-                console.log("请求成功");
                 location.replace("http://localhost:8013/queryPerson?keyword=" + value);
             }
 		});

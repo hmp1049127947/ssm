@@ -28,4 +28,6 @@ public interface UserService {
     int flitTotal(UserPageDto userPageDto);
 
     BaseResult insertPerson(User user);
+
+    User findByNumber(String number);
 }

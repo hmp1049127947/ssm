@@ -46,6 +46,7 @@
             </entry>
           </map>
         </option>
+        <option name="useLomBokOnModel" value="true" />
         <option name="xmlMapperPackage" value="mapper" />
         <option name="xmlMapperPath" value="D:\spring-boot-idea\wyu_hrm\src\main\resources" />
       </ProjectProfile>

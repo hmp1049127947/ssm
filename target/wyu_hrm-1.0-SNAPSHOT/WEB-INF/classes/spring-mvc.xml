@@ -72,19 +72,19 @@
         <property name="maxUploadSize" value="1000000000" />
     </bean>
 
-    <!--<mvc:interceptors>-->
-        <!--&lt;!&ndash;放行了login，故postInterceptor方法中的modelAndView没有login的view&ndash;&gt;-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**"/>-->
-            <!--<mvc:exclude-mapping path="/login"/>-->
-            <!--<mvc:exclude-mapping path="/static/**"/>-->
-            <!--<bean class="com.wyu160802.web.interceptor.LoginInterceptor"/>-->
-        <!--</mvc:interceptor>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**"/>-->
-            <!--<bean class="com.wyu160802.web.interceptor.PermissionInterceptor"/>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:interceptors>
+        <!--放行了login，故postInterceptor方法中的modelAndView没有login的view-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/static/**"/>
+            <bean class="com.wyu160802.web.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.wyu160802.web.interceptor.PermissionInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 
 </beans>

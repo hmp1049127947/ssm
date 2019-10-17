@@ -82,8 +82,9 @@ public class EmployeeController {
      */
     @ResponseBody
     @PostMapping(value = "lists",produces = "application/json;charset=utf-8")
-    public List<EmployeeDto> query() {
-        return employeeService.queryEmpDto();
+    public String query() {
+        List<EmployeeDto> employeeDtos = employeeService.queryEmpDto();
+        return JSON.toJSONString(employeeDtos);
     }
 
 

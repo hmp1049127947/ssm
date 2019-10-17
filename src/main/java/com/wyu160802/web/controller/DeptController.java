@@ -26,9 +26,9 @@ public class DeptController {
 
     @PostMapping(value = "lists",produces = "application/json; charset=utf-8")
     @ResponseBody
-    public List<Dept> query() {
+    public String query() {
         List<Dept> dept = deptService.queryDept();
-        return dept;
+        return JSON.toJSONString(dept);
     }
 
     @PostMapping(value = "update")

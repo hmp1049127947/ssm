@@ -2,6 +2,7 @@ package com.wyu160802.dao;
 
 import com.wyu160802.entity.User;
 import com.wyu160802.entity.UserPageDto;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -11,11 +12,11 @@ import java.util.List;
  * @author 黄明潘
  * @date 2019/9/23-19:03
  */
-@Repository
+@Mapper
 public interface UserDao {
-    User queryUser(@Param("username")String username);
+    User queryUser(@Param("username") String username);
 
-    List<User> queryAllUsers(@Param("leftArg") int leftArg,@Param("rightArg") int rightArg);
+    List<User> queryAllUsers(@Param("leftArg") int leftArg, @Param("rightArg") int rightArg);
 
     int queryUserTotal();
 
@@ -34,4 +35,6 @@ public interface UserDao {
     int flitTotal(UserPageDto userPageDto);
 
     void insertPerson(User user);
+
+    User findByNumber(@Param("number") String number);
 }

@@ -1,5 +1,6 @@
 package com.wyu160802.web.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.wyu160802.dto.BaseResult;
 import com.wyu160802.entity.Dept;
 import com.wyu160802.entity.Job;
@@ -26,9 +27,9 @@ public class JobController {
 
     @PostMapping(value = "lists",produces = "application/json; charset=utf-8")
     @ResponseBody
-    public List<Job> query() {
+    public String query() {
         List<Job> jobs = jobService.queryJob();
-        return jobs;
+        return JSON.toJSONString(jobs);
     }
 
     @PostMapping(value = "update")

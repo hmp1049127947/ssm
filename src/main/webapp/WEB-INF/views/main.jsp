@@ -2,6 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+	<title>人事管理系统</title>
 	<jsp:include page="../includes/easyui_head.jsp"/>
 	<script src="static/assets/app/loadImg.js"></script>
 	<script src="static/assets/app/currentTime.js"></script>
@@ -45,7 +46,10 @@
 			</div>
 		</div>
 		
-		<div data-options="region:'south',split:true,border:false" style="height:30px;">@2016~2019 copyright 五邑大学160802班</div>
+		<div data-options="region:'south',split:true,border:false" style="height:30px;">
+			&copy copyright 2019 wyu160802 | Design by
+			<a href="#" style="color: blue;text-decoration-line:none">hmp</a>
+		</div>
 		<div data-options="region:'east',split:true" title="系统公告" style="width:100px;"></div>
 		<div data-options="region:'west',split:true" title="公司人员信息管理" style="width:180px;">
 

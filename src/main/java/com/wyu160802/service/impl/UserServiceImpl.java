@@ -25,10 +25,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public User queryUser(String number,String password) {
         User user = userDao.queryByNumber(number);
-        if (user.getPassword().equals(password)) {
-            return user;
+        if (user != null) {
+            if (!user.getPassword().equals(password)) {
+                user = null;
+            }
         }
-        return null;
+        return user;
     }
 
     @Override
@@ -142,6 +144,8 @@ public class UserServiceImpl implements UserService {
 
     }
 
-
-
+    @Override
+    public User findByNumber(String number) {
+        return userDao.findByNumber(number);
+    }
 }

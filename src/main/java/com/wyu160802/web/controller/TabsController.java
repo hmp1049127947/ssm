@@ -97,6 +97,10 @@ public class TabsController {
         return "jobManage";
     }
 
+    @GetMapping("chat")
+    public String getChat() {
+        return "10086kefuchat";
+    }
 
 
 

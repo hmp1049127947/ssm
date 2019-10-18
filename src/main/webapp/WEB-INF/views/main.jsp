@@ -47,6 +47,7 @@
 		</div>
 		
 		<div data-options="region:'south',split:true,border:false" style="height:30px;">
+			<jsp:include page="chat.jsp"/>
 			&copy copyright 2019 wyu160802 | Design by
 			<a href="#" style="color: blue;text-decoration-line:none">hmp</a>
 		</div>

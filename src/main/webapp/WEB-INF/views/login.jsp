@@ -33,6 +33,7 @@
     <link href="static/login/css/font-awesome.min.css" rel="stylesheet">
     <!-- Font-Awesome-Icons-CSS -->
     <!-- //css files -->
+
 </head>
 
 <body>
@@ -70,17 +71,13 @@
 			  199.404,117.876 " />
 					</svg>
                 </a>
-                <h3>忘记密码</h3>
+                <h3>重置密码</h3>
                 <form class="form" action="#" method="post">
-                    <p>请输入你的邮箱地址，接收验证码验证</p>
-                    <div class="f_row last">
-                        <label>你的邮箱</label>
-                        <input type="email" name="email" placeholder="邮箱地址" class="input-field" required>
-                        <u></u>
-                    </div>
-                    <button class="btn button submit-w3">
-                        <span>验证</span>
-                    </button>
+                    <input type="text" name="number" placeholder="用户账号" class="input-field" required>
+                    <input type="email" name="email" placeholder="邮箱地址" class="input-field" required>
+                    <input type="password" name="password" placeholder="新的密码" class="input-field" required>
+                    <input type="password" name="password" placeholder="确认密码" class="input-field" required>
+                    <input class="submit-w3" style="background-color: white;color: red" type="submit" value="确定重置">
                 </form>
             </div>
             <div class="box registerBox wthree">

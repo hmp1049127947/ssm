@@ -9,35 +9,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0856ebd4-a053-4335-84e6-092f83211e5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/10086kefuchat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/assets/app/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/assets/app/datetime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/css/chat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/font_Icon/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/font_Icon/demo_fontclass.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/font_Icon/iconfont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/font_Icon/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/font_Icon/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/font_Icon/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/huanxin/EMedia_sdk-dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/huanxin/EMedia_x1v1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/huanxin/WebIMConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/huanxin/webimSDK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/bqxtb01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/hrmbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/icon01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/icon02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/icon03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/kefunan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/jqueryChat/js/jquery.min.js" afterDir="false" />
+    <list default="true" id="0856ebd4-a053-4335-84e6-092f83211e5b" name="Default Changelist" comment="人事管理系统">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyu160802/util/CookieUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyu160802/util/CookieUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/TabsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/TabsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,7 +53,7 @@
     <session id="1914019002">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="38" />
+          <entry key="project.closed" value="39" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="3" />
@@ -93,6 +68,7 @@
           <entry key="project.open.time.25" value="4" />
           <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.32" value="1" />
@@ -102,7 +78,7 @@
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="44" />
+          <entry key="project.opened" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -110,10 +86,10 @@
           <entry key="cell" value="22" />
           <entry key="css" value="230" />
           <entry key="dummy" value="3" />
-          <entry key="java" value="13158" />
+          <entry key="java" value="13231" />
           <entry key="js" value="1461" />
           <entry key="json" value="73" />
-          <entry key="jsp" value="14470" />
+          <entry key="jsp" value="14723" />
           <entry key="properties" value="21" />
           <entry key="sql" value="9" />
           <entry key="tag" value="623" />
@@ -125,9 +101,9 @@
         <counts>
           <entry key="CSS" value="234" />
           <entry key="HTML" value="3" />
-          <entry key="JAVA" value="13158" />
+          <entry key="JAVA" value="13231" />
           <entry key="JSON" value="73" />
-          <entry key="JSP" value="15086" />
+          <entry key="JSP" value="15339" />
           <entry key="JavaScript" value="1461" />
           <entry key="MybatisParam" value="1" />
           <entry key="PLAIN_TEXT" value="15" />
@@ -144,11 +120,11 @@
           <entry key="css" value="19" />
           <entry key="gif" value="6" />
           <entry key="html" value="7" />
-          <entry key="java" value="353" />
+          <entry key="java" value="357" />
           <entry key="jpg" value="16" />
           <entry key="js" value="68" />
           <entry key="json" value="30" />
-          <entry key="jsp" value="168" />
+          <entry key="jsp" value="173" />
           <entry key="png" value="85" />
           <entry key="properties" value="15" />
           <entry key="sql" value="3" />
@@ -165,9 +141,9 @@
           <entry key="CSS" value="19" />
           <entry key="Database Element" value="2" />
           <entry key="Image" value="107" />
-          <entry key="JAVA" value="353" />
+          <entry key="JAVA" value="357" />
           <entry key="JSON" value="30" />
-          <entry key="JSP" value="172" />
+          <entry key="JSP" value="177" />
           <entry key="JavaScript" value="68" />
           <entry key="Properties" value="15" />
           <entry key="Scratch" value="3" />
@@ -183,47 +159,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/assets/app/loadImg.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/queryPerson.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1364">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chat.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1562">
-              <caret line="71" column="34" lean-forward="true" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/kefunan.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/util/CookieUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="173" column="121" selection-start-line="173" selection-start-column="121" selection-end-line="173" selection-end-column="121" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-660" />
+            <state relative-caret-position="309">
+              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#input#4;n#form#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/NoticeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -295,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/entity/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/dao/TestMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hrm.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/UserController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/entity/Dept.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/entity/Employee.java" />
@@ -317,17 +278,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/DeptController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/JobController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/hx.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/app/app.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/assets/app/chat.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/includes/chat.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/TabsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/10086kefuchat.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chat.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/util/CookieUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/LoginController.java" />
       </list>
     </option>
   </component>
@@ -378,9 +340,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="578" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -455,8 +418,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -480,6 +441,40 @@
               <item name="wyu_hrm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wyu_hrm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wyu_hrm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wyu160802" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wyu_hrm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wyu_hrm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wyu160802" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wyu_hrm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wyu_hrm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wyu160802" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wyu_hrm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wyu_hrm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -490,11 +485,22 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="wyu_hrm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wyu_hrm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,7 +510,7 @@
     <property name="ToolWindowInspection Results.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571359553140" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571369772280" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -515,12 +521,12 @@
     <property name="settings.editor.selected.configurable" value="MyBatisCodeHelper" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\jqueryChat\img" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp" />
       <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\WEB-INF\views" />
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\assets\app" />
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\jqueryChat" />
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static" />
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\WEB-INF\includes" />
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\WEB-INF" />
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wyu160802.util" />
@@ -529,12 +535,12 @@
       <recent name="com.wyu160802.dto" />
       <recent name="com.wyu160802.handle" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\jqueryChat\img" />
       <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\WEB-INF\views" />
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\WEB-INF\includes" />
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\WEB-INF" />
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\css" />
-      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp" />
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\assets\app" />
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static\jqueryChat" />
+      <recent name="D:\spring-boot-idea\wyu_hrm\src\main\webapp\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -716,6 +722,7 @@
       <workItem from="1571307622477" duration="10206000" />
       <workItem from="1571320160668" duration="8172000" />
       <workItem from="1571357578294" duration="1971000" />
+      <workItem from="1571741488160" duration="3871000" />
     </task>
     <task id="LOCAL-00001" summary="人事管理系统">
       <created>1570553634054</created>
@@ -777,7 +784,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339402000" />
+    <option name="totallyTimeSpent" value="344875000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -792,7 +799,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" id="Project" order="0" sideWeight="0.49757674" visible="true" weight="0.25718608" />
+      <window_info active="true" id="Project" order="0" sideWeight="0.49757674" visible="true" weight="0.28441754" />
       <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.25340393" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -978,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/empManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
@@ -1006,18 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="58" column="102" selection-start-line="58" selection-start-column="102" selection-end-line="58" selection-end-column="102" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -1029,20 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jobManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1090,13 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/NoticeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/app/app.js" />
     <entry file="das://30c7be8d-32ef-4aa6-833a-52f8e67a93e8/schema/hrdb/table/user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1119,32 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/TabsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2989#2990#0" expanded="true" />
-            <element signature="e#3027#3028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/10086kefuchat.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6446">
@@ -1162,19 +1103,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/assets/app/currentTime.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/assets/app/loadImg.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/queryPerson.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/kefunan.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/icon03.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1190,10 +1118,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chat.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/assets/app/loadImg.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="71" column="34" lean-forward="true" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+        <state relative-caret-position="1056">
+          <caret line="48" column="73" selection-start-line="48" selection-start-column="73" selection-end-line="48" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -1204,9 +1135,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/jqueryChat/img/kefunan.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/chat.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-660" />
+        <state relative-caret-position="500">
+          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="93" column="64" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/TabsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
+            <element signature="e#3027#3028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/queryPerson.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-599">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jobManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="39" column="34" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/empManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/NoticeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wyu160802/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#input#4;n#form#0;n#div#2;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

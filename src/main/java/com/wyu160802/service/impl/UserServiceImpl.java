@@ -23,14 +23,22 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public User queryUser(String number,String password) {
+    public BaseResult queryUser(String number,String password) {
+        BaseResult baseResult = BaseResult.fail();
+        //通过账号获取用户
         User user = userDao.queryByNumber(number);
+        //如果查到该用户
         if (user != null) {
-            if (!user.getPassword().equals(password)) {
-                user = null;
+            //如果密码匹配，登录成功
+            if (user.getPassword().equals(password)) {
+                baseResult = BaseResult.success(user);
+            } else {
+                baseResult.setMessage("登录失败，密码错误");
             }
+        } else {
+           baseResult.setMessage("登录失败，没有该用户");
         }
-        return user;
+        return baseResult;
     }
 
     @Override

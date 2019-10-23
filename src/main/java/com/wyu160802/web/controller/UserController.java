@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.swing.text.AbstractDocument;
 import java.net.URL;
 import java.util.List;
 
@@ -30,7 +31,6 @@ public class UserController {
     @ResponseBody
     @GetMapping(value = "/userslist", produces = "application/json; charset=utf-8")
     public String getUsers(int page,int rows) {
-
         int leftArg = (page - 1) * rows;
         List<User> users = userService.queryAllUsers(leftArg,rows);
         PageDto pageDto = new PageDto();

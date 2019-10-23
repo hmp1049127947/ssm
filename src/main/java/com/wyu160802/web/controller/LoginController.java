@@ -6,6 +6,7 @@ import com.wyu160802.service.UserService;
 import com.wyu160802.util.CookieUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -45,22 +46,29 @@ public class LoginController{
     public String login(String number,String password,
                         HttpServletRequest request,
                         HttpServletResponse response,
+                        Model model,
                         String remember) {
 
-        System.out.println(remember);
-        User user = userService.queryUser(number, password);
+        BaseResult baseResult = userService.queryUser(number, password);
+        System.out.println(baseResult);
         //登录成功
-        if (user != null) {
-            //选中记住登录
-            if (remember!=null) {
+        if (baseResult.getStatus() == 200) {
+            //获取保存在baseResult里的data
+            User user = (User) baseResult.getData();
+            //选中七天免登录
+            if (remember != null) {
                 //保存cookie
-                CookieUtils.setCookie(request,response,"remember_user",user.getNumber(),604800,true);
+                CookieUtils.setCookie(request, response, "remember_user", user.getNumber(), 604800, true);
             }
-            request.getSession().setAttribute("user",user);
+            request.getSession().setAttribute("user", user);
             return "redirect:/main";
+
         } else {
+            //登录失败
+            model.addAttribute("login_info", baseResult.getMessage());
             return "login";
         }
+
 
     }
 

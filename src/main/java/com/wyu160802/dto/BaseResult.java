@@ -5,45 +5,93 @@ package com.wyu160802.dto;
  * @date 2019/7/26-20:32
  */
 public class BaseResult {
+
     public static final int STATUS_SUCCESS = 200;
     public static final int STATUS_FAIL= 500;
     public int status;
     public String message;
-
-    public BaseResult(){
-
-    }
+    public Object data;
 
     public BaseResult(int status, String message) {
         this.status = status;
         this.message = message;
     }
 
+    public BaseResult(int status, String message, Object data) {
+        this.status = status;
+        this.message = message;
+        this.data = data;
+    }
+
+    public BaseResult(Object data) {
+        this.status = STATUS_SUCCESS;
+        this.message = "success";
+        this.data = data;
+    }
+
+    public BaseResult() {
+    }
+
+    /**
+     *  status=200,message='success',data=null
+     * @return
+     */
     public static BaseResult success() {
-        return getBaseResult(STATUS_SUCCESS, "成功");
+        return new BaseResult(null);
     }
 
+    /**
+     * status=200,message='success',this.data=data
+     * @param data
+     * @return
+     */
+    public static BaseResult success(Object data) {
+        return new BaseResult(data);
+    }
+
+    /**
+     * status=200,this.message=message,data=null
+     * @param message
+     * @return
+     */
     public static BaseResult success(String message) {
-        return getBaseResult(STATUS_SUCCESS, message);
+        return new BaseResult(STATUS_SUCCESS,message);
     }
 
+    /**
+     * status=200,this.message=message,this.data=data
+     * @param message
+     * @return
+     */
+    public static BaseResult success(String message,Object data) {
+        return new BaseResult(STATUS_SUCCESS,message,data);
+    }
+
+    /**
+     * status=500,this.message='fail',data=null
+     * @return
+     */
     public static BaseResult fail() {
-        return getBaseResult(STATUS_FAIL, "失败");
+        return new BaseResult(STATUS_FAIL, "fail");
     }
 
+    /**
+     * status=500,this.message=message,data=null
+     * @param message
+     * @return
+     */
     public static BaseResult fail(String message) {
-        return getBaseResult(STATUS_FAIL, message);
+        return new BaseResult(STATUS_FAIL, message);
     }
 
+    /**
+     * this.status=status,this.message=message
+     * @param status
+     * @param message
+     * @return
+     */
     public static BaseResult fail(int status, String message) {
-        return getBaseResult(status, message);
-    }
-
-    private static BaseResult getBaseResult(int status,String message) {
-        BaseResult baseResult = new BaseResult();
-        baseResult.setStatus(status);
-        baseResult.setMessage(message);
-        return baseResult;
+        return new BaseResult(status, message);
     }
 
     public int getStatus() {
@@ -60,5 +108,22 @@ public class BaseResult {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseResult{" +
+                "status=" + status +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
     }
 }

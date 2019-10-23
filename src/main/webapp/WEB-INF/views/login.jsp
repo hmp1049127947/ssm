@@ -130,6 +130,11 @@
 <!-- password-script -->
 <script>
     window.onload = function () {
+        var login_info = '${login_info}';
+        console.log(login_info);
+        if (login_info!='') {
+            alert(login_info)
+        }
         document.getElementById("password1").onchange = validatePassword;
         document.getElementById("password2").onchange = validatePassword;
     }
@@ -146,8 +151,6 @@
 </script>
 <!-- //password-script -->
 <!-- //js files -->
-
-
 </body>
 
 </html>

@@ -11,7 +11,8 @@ import java.util.List;
  * @date 2019/9/23-19:08
  */
 public interface UserService {
-    User queryUser(String number,String password);
+
+    BaseResult queryUser(String number,String password);
 
     List<User> queryAllUsers(int leftArg,int rightArg);
 

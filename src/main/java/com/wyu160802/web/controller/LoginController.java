@@ -27,7 +27,7 @@ public class LoginController{
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = {"", "/", "/login"})
+    @GetMapping(value = {"/", "/login"})
     public String login(HttpServletRequest request) {
         String cookieValue = CookieUtils.getCookieValue(request, "remember_user",true);
         //如果cookie有值
@@ -65,7 +65,7 @@ public class LoginController{
 
         } else {
             //登录失败
-            model.addAttribute("login_info", baseResult.getMessage());
+            model.addAttribute("baseResult", baseResult);
             return "login";
         }
 
@@ -82,6 +82,7 @@ public class LoginController{
     @PostMapping("/register")
     public String register(User user, RedirectAttributes redirectAttributes) {
         BaseResult baseResult = userService.insertPerson(user);
+        System.out.println(user);
         if (baseResult.status == 200) {
             baseResult.setMessage("注册成功");
         }

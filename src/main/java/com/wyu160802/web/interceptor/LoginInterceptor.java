@@ -15,7 +15,6 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     @SuppressWarnings("AlibabaUndefineMagicConstant")
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-
         if (httpServletRequest.getSession().getAttribute("user") == null) {
             httpServletResponse.sendRedirect("/login");
             return false;

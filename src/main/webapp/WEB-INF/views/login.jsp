@@ -43,9 +43,6 @@
         <div class="formBox level-login">
             <div class="box boxShaddow"></div>
             <div class="box loginBox">
-                <c:if test="${baseResult!=null}">
-                    <h3 style="color: red">${baseResult.message}</h3>
-                </c:if>
                 <h3>请登录</h3>
                 <form class="form" action="/login" method="post">
                     <div class="f_row-2">
@@ -91,7 +88,7 @@
                         <input type="password" name="password" placeholder="密码" id="password1" class="input-field" required>
                     </div>
                     <div class="f_row-2 last">
-                        <input type="password" name="password02" placeholder="确定密码" id="password2" class="input-field" required>
+                        <input type="password" name="password" placeholder="确定密码" id="password2" class="input-field" required>
                     </div>
                     <div class="f_row-2">
                         <input type="text" class="input-field" placeholder="手机号" name="phone" required>
@@ -130,7 +127,7 @@
 <!-- password-script -->
 <script>
     window.onload = function () {
-        var login_info = '${login_info}';
+        var login_info = '${baseResult.message}';
         console.log(login_info);
         if (login_info!='') {
             alert(login_info)

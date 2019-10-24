@@ -88,7 +88,7 @@
                         <input type="password" name="password" placeholder="密码" id="password1" class="input-field" required>
                     </div>
                     <div class="f_row-2 last">
-                        <input type="password" name="password" placeholder="确定密码" id="password2" class="input-field" required>
+                        <input type="password" name="password2" placeholder="确定密码" id="password2" class="input-field" required>
                     </div>
                     <div class="f_row-2">
                         <input type="text" class="input-field" placeholder="手机号" name="phone" required>

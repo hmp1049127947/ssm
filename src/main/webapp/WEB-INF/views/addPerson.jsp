@@ -10,28 +10,34 @@
 <body >
 
 	<div class="easyui-panel" title="添加用户" style="width:99%;height: 95%">
-	    <form id="ff"  class="easyui-form" data-options="novalidate:true" >
+	    <form id="ff" method="post"  class="easyui-form" data-options="novalidate:true" >
 	    	<table cellpadding="5">
 				<tr>
 					<td style="width: 80px"></td>
 					<td>账号:</td>
-					<td><input class="easyui-textbox" type="text" id="number" name="number" data-options="required:true"></input></td>
+					<td><input class="easyui-textbox" type="text" id="number" name="number" prompt="请输入账号" data-options="required:true"></input></td>
 					<td>用户名:</td>
-					<td><input class="easyui-textbox" type="text" id="username" name="username" data-options="required:false"></input></td>
+					<td><input class="easyui-textbox" type="text" id="username"  name="username" data-options="required:false"></input></td>
 				</tr>
 	    		<tr>
 					<td style="width: 50px"></td>
 	    			<td>密码:</td>
-	    			<td><input id="password" class="easyui-textbox"  type="password" name="password" data-options="required:true"></input></td>
-					<td>确认密码:</td>
-					<td><input id="psw_again" class="easyui-textbox"  type="password" name="pws_again" data-options="required:true"></input></td>
+	    			<td><input id="pass" class="easyui-passwordbox" prompt="请输入密码"  iconWidth="28" data-options="required:true"></td>
+					<td>用户角色:</td>
+					<td>
+						<select editable="false" class="easyui-combobox" name="status" style="width:171px;">
+							<option value="1">普通用户</option>
+							<option value="2">管理员</option>
+							<option value="3">超级管理员</option>
+						</select>
+					</td>
 	    		</tr>
 	    		<tr>
 					<td style="width: 50px"></td>
 	    			<td>手机号:</td>
-	    			<td><input class="easyui-textbox" type="text" id="phone" name="phone" data-options="required:true,validType:'phone'"></input></td>
+	    			<td><input class="easyui-textbox" type="text" id="phone" prompt="请输入手机号" name="phone" data-options="required:true,validType:'length[7,11]'"></input></td>
 					<td>备注:</td>
-					<td><input class="easyui-textbox" name="remark" id="remark" data-options="multiline:true" style="height:45px"></input></td>
+					<td><input class="easyui-textbox" name="remark" id="remark"  data-options="multiline:true" style="height:45px"></input></td>
 	    		</tr>
 				<tr>
 					<td style="width: 50px"></td>
@@ -44,55 +50,27 @@
 	    	</table>
 	    </form>
 	    </div>
-	<script>
-        function submitForm(){
-            var psw = $("#password").val();
-            var psw_again = $("#psw_again").val();
-            var number = $("#number").val();
-            var phone = $("#phone").val();
-            var username = $("#username").val();
-            var remark = $("#remark").val();
-
-            if (number == "" || number == "undefine" || number == null) {
-                $.messager.alert('提示信息', '账号不能为空', 'error');
-                return;
-            }
-            else if (psw == "" || psw == "undefine" || psw == null) {
-                $.messager.alert('提示信息', '密码不能为空', 'error');
-                return;
-            }
-            else if (psw_again == "" || psw_again == "undefine" || psw_again == null) {
-                $.messager.alert('提示信息', '确认密码不能为空', 'error');
-                return;
-            }
-            else if (phone == "" || phone == "undefine" || phone == null) {
-                $.messager.alert('提示信息', '手机号不能为空', 'error');
-                return;
-            }
-            if (psw == psw_again) {
-                $.ajax({
-                    url:"/user/add",
-                    type: "POST",
-                    data: {"number":number,"phone":phone,"username":username,"password":psw, "remark": remark},
-                    dataType:"JSON",
-                    success:function (data) {
-                        if (data.status == 200) {
-                            $.messager.alert('提示信息', data.message, 'info');
-                        } else {
-                            $.messager.alert('提示信息', data.message, 'error');
-                        }
-                    }
-
-                });
-
-            } else {
-                $.messager.alert('操作错误', '两次密码不一致', 'error');
-            }
-
-        }
-        function clearForm(){
-            $('#ff').form('clear');
-        }
-	</script>
 </body>
+<script>
+    function submitForm(){
+        $('#ff').form('submit',{
+            url:"/user/add",
+            onSubmit:function(){
+                return $(this).form('enableValidation').form('validate');
+            },
+            dataType: "json",
+            success:function (data) {
+                var data = eval('(' + data + ')');
+                if (data.status == 200) {
+                    $.messager.alert('提示信息', data.message, 'info');
+                } else {
+                    $.messager.alert('提示信息', data.message, 'error');
+                }
+            }
+        });
+    }
+    function clearForm(){
+        $('#ff').form('clear');
+    }
+</script>
 </html>

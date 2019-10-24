@@ -92,14 +92,7 @@ public class UserController {
 
     @ResponseBody
     @PostMapping(value = "add", produces = "application/json; charset=utf-8")
-    public String insertPerson(String number, String phone,
-                               @RequestParam(required = false) String username, String password, @RequestParam(required = false) String remark) {
-        User user = new User();
-        user.setNumber(number);
-        user.setPhone(phone);
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setRemark(remark);
+    public String insertPerson(User user) {
         System.out.println(user);
         BaseResult baseResult = userService.insertPerson(user);
         System.out.println(baseResult.toString());

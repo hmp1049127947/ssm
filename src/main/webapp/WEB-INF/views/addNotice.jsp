@@ -13,7 +13,7 @@
 </head>
 <body>
 <!--/XJXYProject得到当前应用的名称  -->
-	<form >
+	<form id="ff" method="post" action="notice/add">
 		<table cellpadding="7">
 			<tr>
 				<td>公告名称:</td>
@@ -25,46 +25,34 @@
 			</tr>
 
 		</table>
-		<textarea id="container" name="container"
+		<textarea id="container" name="content"
 				  style="width: 100%; height: 230px;"> </textarea>
 			<br>
-			<input type="button" onclick="saveNotice()" value="保存">
+		<a href="javascript:void(0)" class="easyui-linkbutton c1"  onclick="submitForm()" style="width:100px">保存</a>
 	</form>
 </body>
-
-<script type="text/javascript">
-	function saveNotice() {
-        var name = $("#name").val();
-        var title = $("#title").val();
-        var content = $('textarea[name="container"]').val();
-        console.log(content);
-        if (name == "" || name == "undefine" || name == null) {
-            $.messager.alert("提示信息", "公告名称不能为空");
-            return;
-        }
-        if (title == "" || title == "undefine" || title == null) {
-            $.messager.alert("提示信息", "公告主题不能为空");
-            return;
-        }
-        if (content == "" || content == "undefine" || content == null) {
-            $.messager.alert("提示信息", "公告内容不能为空");
-            return;
-        }
-        $.ajax({
-            url: "notice/add",
-            type: "post",
-			data: {"name":name,"title":title, "content": content},
-            dataType: "JSON",
-			success:function (data) {
+<script >
+    var ue = UE.getEditor("container");
+    function submitForm(){
+        $('#ff').form('submit',{
+            onSubmit:function(){
+                var flag= $(this).form('enableValidation').form('validate');
+                if (ue.hasContents()==false) {
+                    $.messager.alert("提示信息", "公告内容不能为空");
+                    flag=false
+                }
+                return flag;
+            },
+            success:function (data) {
+                var data = eval('(' + data + ')');
+                console.log(data);
                 if (data.status == 200) {
-                    $.messager.alert("提示信息", data.message, "info");
-                }else {
+                    $.messager.alert('提示信息', data.message, 'info');
+                } else {
                     $.messager.alert('提示信息', data.message, 'error');
                 }
             }
-		});
+        });
     }
-	var ue = UE.getEditor("container");
-
 </script>
 </html>

@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <spring.version>4.3.17.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <servlet.version>3.1.0</servlet.version>
         <junit.version>4.12</junit.version>
         <lang3.version>3.5</lang3.version>
